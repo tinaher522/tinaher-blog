@@ -13,7 +13,9 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://tinaher-blog.vercel.app
+root: /
+relative_link: false  # 关闭相对路径
 permalink: :year/:title/
 permalink_defaults:
 pretty_urls:
@@ -97,6 +99,16 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: butterfly
+
+# SEO设置
+sitemap:
+  path: sitemap.xml
+  
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  content: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
