@@ -15,7 +15,6 @@ timezone: ''
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://tinaher-blog.vercel.app
 root: /
-relative_link: false  # 关闭相对路径
 permalink: :year/:title/
 permalink_defaults:
 pretty_urls:
