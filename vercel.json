@@ -19,6 +19,21 @@
       ]
     }
   ],
+  "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "public",
+          "includeFiles": [
+            "themes/**",
+            "source/**",
+            "_config.yml",
+            "_config.butterfly.yml"
+          ]
+        }
+      }
+    ],
   "routes": [
     {
       "src": "^/api/?$",
@@ -26,9 +41,14 @@
       "headers": {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*"
+      },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
       }
     }
   ],
+
   "redirects": [
     {
       "source": "/resume",
@@ -42,6 +62,10 @@
       "destination": "/:1"
     }
   ],
+  "env": {
+      "HEXO_DEBUG": "true",
+      "NPM_FLAGS": "--legacy-peer-deps"
+    }
   "trailingSlash": false
 }
 

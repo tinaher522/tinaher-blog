@@ -1,3 +1,12 @@
+if theme.card_webinfo.enable && site.posts.length > 0
+  .card-widget.card-webinfo
+    // ...其他内容...
+    if site.totalcount || symbolCount.total  
+      .webinfo-item
+        .item-name= `${_p('aside.card_webinfo.site_wordcount')} :`
+        .item-count= site.totalcount || symbolCount.total(site) || '0'
+
+
 if theme.aside.card_webinfo.enable
   .card-widget.card-webinfo
     .item-headline
@@ -16,7 +25,7 @@ if theme.aside.card_webinfo.enable
       if theme.wordcount.enable && theme.wordcount.total_wordcount
         .webinfo-item
           .item-name= `${_p('aside.card_webinfo.site_wordcount')} :`
-          .item-count= totalcount(site)
+          .item-count= site.totalcount || symbolCount.total(site) || symbolCount(site) || '0'
       if theme.umami_analytics.enable && theme.umami_analytics.UV_PV.site_uv
         .webinfo-item
           .item-name= `${_p('aside.card_webinfo.site_uv_name')} :`
