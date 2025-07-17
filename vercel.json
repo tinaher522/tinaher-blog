@@ -42,10 +42,7 @@
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*"
       },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-      }
+    
     }
   ],
 
@@ -62,10 +59,7 @@
       "destination": "/:1"
     }
   ],
-  "env": {
-      "HEXO_DEBUG": "true",
-      "NPM_FLAGS": "--legacy-peer-deps"
-    }
+
   "trailingSlash": false
 }
 
