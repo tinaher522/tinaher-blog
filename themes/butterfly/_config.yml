@@ -17,8 +17,13 @@ nav:
   # Whether to fix navigation bar
   fixed: false
 
+mode: dark
+
 menu:
-  # Home: / || fas fa-home
+  Home: / || fas fa-home
+  Archives: /archives/ || fas fa-archive
+  Music: /music/ || fas fa-music
+  About: /about/ || fas fa-heart
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
@@ -45,10 +50,13 @@ code_blocks:
 # Social media links
 # Formal:
 #   icon: link || the description || color
-social:
+
   # fab fa-github: https://github.com/xxxxx || Github || '#24292e'
   # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
-
+social:
+  GitHub: https://github.com/tinaher522 || fab fa-github
+  Twitter: https://twitter.com/tinaher522 || fab fa-twitter
+  Email: mailto:tinaher522@gmail.com || fas fa-envelope
 # --------------------------------------
 # Image Settings
 # --------------------------------------
@@ -427,7 +435,7 @@ copy:
 
 # Need to install the hexo-wordcount plugin
 wordcount:
-  enable: false
+  enable: true
   # Display the word count of the article in post meta
   post_wordcount: true
   # Display the time to read the article in post meta
@@ -1064,9 +1072,6 @@ CDN:
   custom_format:
 
   option:
-    css_prefix: https://tinaher-blog.vercel.app/css/
-    js_prefix: https://tinaher-blog.vercel.app/js/
-    third_party_prefix: https://tinaher-blog.vercel.app/
     # abcjs_basic_js:
     # activate_power_mode:
     # algolia_js:
@@ -1122,6 +1127,3 @@ CDN:
     # valine:
     # waline_css:
     # waline_js:
-inject:
-  head:
-    - '<link rel="stylesheet" href="/css/style.css">'
